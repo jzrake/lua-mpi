@@ -1,0 +1,10 @@
+{
+    "args": [
+        {
+            "type": "MPI_Group*", 
+            "name": "group"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Group_free"
+}

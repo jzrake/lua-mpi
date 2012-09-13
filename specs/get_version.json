@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "int*", 
+            "name": "version"
+        }, 
+        {
+            "type": "int*", 
+            "name": "subversion"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Get_version"
+}

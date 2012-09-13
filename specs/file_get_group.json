@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_File", 
+            "name": "fh"
+        }, 
+        {
+            "type": "MPI_Group*", 
+            "name": "group"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_File_get_group"
+}

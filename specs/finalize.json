@@ -1,0 +1,5 @@
+{
+    "args": [], 
+    "retVal": "int", 
+    "name": "MPI_Finalize"
+}

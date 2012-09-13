@@ -1,0 +1,10 @@
+{
+    "args": [
+        {
+            "type": "MPI_Comm", 
+            "name": "comm"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Barrier"
+}

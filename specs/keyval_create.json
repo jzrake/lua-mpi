@@ -1,0 +1,22 @@
+{
+    "args": [
+        {
+            "type": "MPI_Copy_function*", 
+            "name": "copy_attr_fn"
+        }, 
+        {
+            "type": "MPI_Delete_function*", 
+            "name": "delete_attr_fn"
+        }, 
+        {
+            "type": "int*", 
+            "name": "keyval"
+        }, 
+        {
+            "type": "void*", 
+            "name": "extra_state"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Keyval_create"
+}

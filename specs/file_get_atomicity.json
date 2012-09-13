@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_File", 
+            "name": "fh"
+        }, 
+        {
+            "type": "int*", 
+            "name": "flag"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_File_get_atomicity"
+}

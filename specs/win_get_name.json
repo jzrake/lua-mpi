@@ -1,0 +1,18 @@
+{
+    "args": [
+        {
+            "type": "MPI_Win", 
+            "name": "win"
+        }, 
+        {
+            "type": "char*", 
+            "name": "win_name"
+        }, 
+        {
+            "type": "int*", 
+            "name": "resultlen"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Win_get_name"
+}

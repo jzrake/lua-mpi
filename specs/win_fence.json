@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "int", 
+            "name": "assert"
+        }, 
+        {
+            "type": "MPI_Win", 
+            "name": "win"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Win_fence"
+}

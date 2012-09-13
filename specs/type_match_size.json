@@ -1,0 +1,18 @@
+{
+    "args": [
+        {
+            "type": "int", 
+            "name": "typeclass"
+        }, 
+        {
+            "type": "int", 
+            "name": "size"
+        }, 
+        {
+            "type": "MPI_Datatype*", 
+            "name": "type"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Type_match_size"
+}

@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "void*", 
+            "name": "location"
+        }, 
+        {
+            "type": "MPI_Aint*", 
+            "name": "address"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Address"
+}

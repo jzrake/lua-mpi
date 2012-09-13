@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Comm", 
+            "name": "comm"
+        }, 
+        {
+            "type": "int*", 
+            "name": "ndims"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Cartdim_get"
+}

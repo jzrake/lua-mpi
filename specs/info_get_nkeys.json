@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Info", 
+            "name": "info"
+        }, 
+        {
+            "type": "int*", 
+            "name": "nkeys"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Info_get_nkeys"
+}

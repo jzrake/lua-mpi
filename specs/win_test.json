@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Win", 
+            "name": "win"
+        }, 
+        {
+            "type": "int*", 
+            "name": "flag"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Win_test"
+}

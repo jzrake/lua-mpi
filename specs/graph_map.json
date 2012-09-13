@@ -1,0 +1,26 @@
+{
+    "args": [
+        {
+            "type": "MPI_Comm", 
+            "name": "comm"
+        }, 
+        {
+            "type": "int", 
+            "name": "nnodes"
+        }, 
+        {
+            "type": "int*", 
+            "name": "index"
+        }, 
+        {
+            "type": "int*", 
+            "name": "edges"
+        }, 
+        {
+            "type": "int*", 
+            "name": "newrank"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Graph_map"
+}

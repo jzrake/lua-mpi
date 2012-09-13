@@ -1,0 +1,10 @@
+{
+    "args": [
+        {
+            "type": "MPI_Request*", 
+            "name": "request"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Cancel"
+}

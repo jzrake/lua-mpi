@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "int", 
+            "name": "errorcode"
+        }, 
+        {
+            "type": "int*", 
+            "name": "errorclass"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Error_class"
+}

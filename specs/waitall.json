@@ -1,0 +1,18 @@
+{
+    "args": [
+        {
+            "type": "int", 
+            "name": "count"
+        }, 
+        {
+            "type": "MPI_Request*", 
+            "name": "requests"
+        }, 
+        {
+            "type": "MPI_Status*", 
+            "name": "statuses"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Waitall"
+}

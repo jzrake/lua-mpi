@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Status*", 
+            "name": "status"
+        }, 
+        {
+            "type": "int*", 
+            "name": "flag"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Test_cancelled"
+}

@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Errhandler*", 
+            "name": "errhandler"
+        }, 
+        {
+            "type": "&errhdl;", 
+            "name": "MPI_Finalize()"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Errhandler_free"
+}

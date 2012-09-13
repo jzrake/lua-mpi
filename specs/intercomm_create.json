@@ -1,0 +1,30 @@
+{
+    "args": [
+        {
+            "type": "MPI_Comm", 
+            "name": "local_comm"
+        }, 
+        {
+            "type": "int", 
+            "name": "local_leader"
+        }, 
+        {
+            "type": "MPI_Comm", 
+            "name": "bridge_comm"
+        }, 
+        {
+            "type": "int", 
+            "name": "remote_leader"
+        }, 
+        {
+            "type": "int", 
+            "name": "tag"
+        }, 
+        {
+            "type": "MPI_Comm*", 
+            "name": "newintercomm"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Intercomm_create"
+}

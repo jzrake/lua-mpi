@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Datatype", 
+            "name": "type"
+        }, 
+        {
+            "type": "MPI_Datatype*", 
+            "name": "newtype"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Type_dup"
+}

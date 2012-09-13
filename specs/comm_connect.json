@@ -1,0 +1,26 @@
+{
+    "args": [
+        {
+            "type": "char*", 
+            "name": "port_name"
+        }, 
+        {
+            "type": "MPI_Info", 
+            "name": "info"
+        }, 
+        {
+            "type": "int", 
+            "name": "root"
+        }, 
+        {
+            "type": "MPI_Comm", 
+            "name": "comm"
+        }, 
+        {
+            "type": "MPI_Comm*", 
+            "name": "newcomm"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Comm_connect"
+}

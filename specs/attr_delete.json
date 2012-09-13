@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Comm", 
+            "name": "comm"
+        }, 
+        {
+            "type": "int", 
+            "name": "keyval"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Attr_delete"
+}

@@ -1,0 +1,10 @@
+{
+    "args": [
+        {
+            "type": "MPI_Comm*", 
+            "name": "parent"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Comm_get_parent"
+}

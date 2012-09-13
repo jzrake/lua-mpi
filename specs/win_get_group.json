@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Win", 
+            "name": "win"
+        }, 
+        {
+            "type": "MPI_Group*", 
+            "name": "group"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Win_get_group"
+}

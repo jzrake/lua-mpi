@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Datatype", 
+            "name": "mtype"
+        }, 
+        {
+            "type": "MPI_Aint*", 
+            "name": "ub"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Type_ub"
+}

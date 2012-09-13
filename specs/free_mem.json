@@ -1,0 +1,10 @@
+{
+    "args": [
+        {
+            "type": "void*", 
+            "name": "baseptr"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Free_mem"
+}

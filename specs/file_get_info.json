@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_File", 
+            "name": "fh"
+        }, 
+        {
+            "type": "MPI_Info*", 
+            "name": "info_used"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_File_get_info"
+}

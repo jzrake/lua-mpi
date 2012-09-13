@@ -1,0 +1,5 @@
+{
+    "args": [], 
+    "retVal": "double", 
+    "name": "MPI_Wtime"
+}

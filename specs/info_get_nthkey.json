@@ -1,0 +1,18 @@
+{
+    "args": [
+        {
+            "type": "MPI_Info", 
+            "name": "info"
+        }, 
+        {
+            "type": "int", 
+            "name": "n"
+        }, 
+        {
+            "type": "char*", 
+            "name": "key"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Info_get_nthkey"
+}

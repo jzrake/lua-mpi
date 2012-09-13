@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "MPI_Info", 
+            "name": "info"
+        }, 
+        {
+            "type": "char*", 
+            "name": "key"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Info_delete"
+}

@@ -1,0 +1,14 @@
+{
+    "args": [
+        {
+            "type": "const", 
+            "name": "int"
+        }, 
+        {
+            "type": "level", 
+            "name": "..."
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Pcontrol"
+}

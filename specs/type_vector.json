@@ -1,0 +1,26 @@
+{
+    "args": [
+        {
+            "type": "int", 
+            "name": "count"
+        }, 
+        {
+            "type": "int", 
+            "name": "blocklength"
+        }, 
+        {
+            "type": "int", 
+            "name": "stride"
+        }, 
+        {
+            "type": "MPI_Datatype", 
+            "name": "oldtype"
+        }, 
+        {
+            "type": "MPI_Datatype*", 
+            "name": "newtype"
+        }
+    ], 
+    "retVal": "int", 
+    "name": "MPI_Type_vector"
+}
