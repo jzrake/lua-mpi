@@ -1,4 +1,5 @@
 {
+    "category": "The Info Object C Bindings", 
     "args": [
         {
             "type": "MPI_Info", 
