@@ -65,5 +65,5 @@ clean :
 	$(RM) *.o main
 
 # Also remove local Lua sources
-realclean :
+realclean : clean
 	$(RM) -r $(LVER)

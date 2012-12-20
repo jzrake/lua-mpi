@@ -9,7 +9,7 @@
   static void luampi_push_MPI_##s(lua_State *L, MPI_##s init, int N)    \
   {                                                                     \
     int n;                                                              \
-    MPI_##s *ud = (MPI_##s*) lua_newuserdata(L, sizeof(MPI_##s));       \
+    MPI_##s *ud = (MPI_##s*) lua_newuserdata(L, N*sizeof(MPI_##s));	\
       for (n=0; n<N; ++n) ud[n] = init;                                 \
       luaL_setmetatable(L, "MPI::"#s);                                  \
   }                                                                     \

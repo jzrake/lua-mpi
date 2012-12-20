@@ -29,6 +29,8 @@ for _,v in ipairs(callback_types) do
    assert(debug.getmetatable(f) == mt)
 end
 
+local statuses = MPI.Status(100)
+
 local comm = MPI.Comm()
 assert(type(comm) == 'userdata')
 
