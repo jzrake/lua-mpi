@@ -28,9 +28,6 @@ scripting language.
 Make sure you have the MPI sources installed.
 
 
-Optionally, you may install local Lua sources by typing `make lua`.
-
-
 Create a file called Makefile.in which contains macros like these:
 
     CC = mpicc
@@ -40,6 +37,9 @@ Create a file called Makefile.in which contains macros like these:
 
     CFLAGS = -Wall -O2
     LVER = lua-5.2.1 # can be lua-5.1 or other
+
+
+Optionally, you may install local Lua sources by typing `make lua`.
 
 
 Run `python readspec.py` in order to generate wrapper code.
