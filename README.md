@@ -42,9 +42,6 @@ Create a file called Makefile.in which contains macros like these:
 Optionally, you may install local Lua sources by typing `make lua`.
 
 
-Run `python readspec.py` in order to generate wrapper code.
-
-
 Run `make`.
 
 

@@ -19,10 +19,7 @@
 # 3. Optionally, you may install local Lua sources by typing `make lua`.
 #
 #
-# 4. Run `python readspec.py` in order to generate wrapper code.
-#
-#
-# 5. Run `make`.
+# 4. Run `make`.
 #
 # ------------------------------------------------------------------------------
 
@@ -51,7 +48,10 @@ $(LVER) :
 		$(MAKE) install INSTALL_TOP=$(PWD)/$(LVER)
 	$(RM) $(LVER).tar.gz
 
-main.o : main.c
+mpifuncs.c :
+	python readspec.py > $@
+
+main.o : main.c mpifuncs.c
 	$(CC) $(CFLAGS) -c -o $@ $< $(LUA_I)
 
 buffer.o : buffer.c
@@ -61,7 +61,7 @@ main : main.o buffer.o
 	$(CC) $(CFLAGS) -o $@ $^ $(LUA_I) $(LUA_A)
 
 clean :
-	$(RM) *.o main
+	$(RM) *.o mpifuncs.c main
 
 # Also remove local Lua sources
 realclean : clean
