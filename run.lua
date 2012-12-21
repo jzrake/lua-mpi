@@ -2,8 +2,8 @@
 local MPI = require 'MPI'
 local buffer = require 'buffer'
 
-local size = buffer.new_buffer(buffer.sizeof(buffer.int))
 local rank = buffer.new_buffer(buffer.sizeof(buffer.int))
+local size = buffer.new_buffer(buffer.sizeof(buffer.int))
 
 MPI.Init()
 MPI.Comm_rank(MPI.COMM_WORLD, rank)
@@ -46,8 +46,8 @@ local function example_function()
    local MPI = require 'MPI'
    local buffer = require 'buffer'
 
-   local size = buffer.new_buffer(buffer.sizeof(buffer.int))
    local rank = buffer.new_buffer(buffer.sizeof(buffer.int))
+   local size = buffer.new_buffer(buffer.sizeof(buffer.int))
 
    MPI.Init()
    MPI.Comm_rank(MPI.COMM_WORLD, rank)
