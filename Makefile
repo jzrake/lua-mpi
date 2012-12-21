@@ -35,7 +35,7 @@ OS ?= generic
 LVER ?= lua-5.2.1
 
 LUA_I ?= -I$(LUA_HOME)/include
-LUA_A ?= -L$(LUA_HOME)/lib -llua
+LUA_L ?= -L$(LUA_HOME)/lib -llua
 
 
 default : main
@@ -62,7 +62,7 @@ main.o : main.c
 	$(CC) $(CFLAGS) -c -o $@ $< $(LUA_I)
 
 main : main.o lua-mpi.o buffer.o
-	$(CC) $(CFLAGS) -o $@ $^ $(LUA_I) $(LUA_A)
+	$(CC) $(CFLAGS) -o $@ $^ $(LUA_I) $(LUA_L)
 
 clean :
 	$(RM) *.o mpifuncs.c main
