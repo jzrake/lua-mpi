@@ -52,13 +52,16 @@ $(LVER) :
 mpifuncs.c :
 	python readspec.py > $@
 
-main.o : main.c mpifuncs.c
+lua-mpi.o : lua-mpi.c mpifuncs.c
 	$(CC) $(CFLAGS) -c -o $@ $< $(LUA_I)
 
 buffer.o : buffer.c
 	$(CC) $(CFLAGS) -c -o $@ $< $(LUA_I)
 
-main : main.o buffer.o
+main.o : main.c
+	$(CC) $(CFLAGS) -c -o $@ $< $(LUA_I)
+
+main : main.o lua-mpi.o buffer.o
 	$(CC) $(CFLAGS) -o $@ $^ $(LUA_I) $(LUA_A)
 
 clean :
