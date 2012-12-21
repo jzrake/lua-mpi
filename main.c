@@ -38,7 +38,7 @@
 
 
 static MPI_Aint MPI_AINT_NULL = 0;
-static MPI_Status MPI_STATUS_NULL;
+static MPI_Status MPI_STATUS_NULL = {0,0,0};
 static MPI_Offset MPI_OFFSET_NULL = 0;
 
 MPI_STRUCT_TYPE(Aint, MPI_AINT_NULL)

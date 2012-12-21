@@ -40,3 +40,21 @@ assert(buffer.get_typed(size, buffer.int, 0) == 1)
 
 MPI.Finalize()
 print(debug.getinfo(1).source, ": All tests passed")
+
+
+local function example_function()
+   local MPI = require 'MPI'
+   local buffer = require 'buffer'
+
+   local size = buffer.new_buffer(buffer.sizeof(buffer.int))
+   local rank = buffer.new_buffer(buffer.sizeof(buffer.int))
+
+   MPI.Init()
+   MPI.Comm_rank(MPI.COMM_WORLD, rank)
+   MPI.Comm_size(MPI.COMM_WORLD, size)
+
+   print(buffer.get_typed(rank, buffer.int, 0))
+   print(buffer.get_typed(size, buffer.int, 0))
+
+   MPI.Finalize()
+end
