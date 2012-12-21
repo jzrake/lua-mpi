@@ -23,7 +23,8 @@
 #
 # ------------------------------------------------------------------------------
 
-include Makefile.in
+MAKEFILE_IN = Makefile.in
+include $(MAKEFILE_IN)
 
 CFLAGS ?= -Wall
 CURL ?= curl
