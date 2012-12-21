@@ -1,3 +1,9 @@
 
 lua-5.1/
 lua-5.2.1/
+/Makefile.in
+/buffer.o
+/lua-mpi.o
+/main
+/main.o
+/mpifuncs.c
