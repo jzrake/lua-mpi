@@ -10,8 +10,8 @@
             "name": "n_triplets"
         }, 
         {
-            "type": "int*", 
-            "name": "ranges[3]"
+            "type": "int**", 
+            "name": "ranges"
         }, 
         {
             "type": "MPI_Group*", 
