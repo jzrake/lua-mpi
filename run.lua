@@ -30,6 +30,7 @@ for _,v in ipairs(callback_types) do
 end
 
 local statuses = MPI.Status(100)
+local requests = MPI.Request(100)
 
 local comm = MPI.Comm()
 assert(type(comm) == 'userdata')

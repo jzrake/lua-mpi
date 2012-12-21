@@ -74,28 +74,8 @@ static int _MPI_Init(lua_State *L)
   lua_pushnumber(L, ret);
   return 1;
 }
-static int _MPI_Finalize(lua_State *L)
-{
-  int ret = MPI_Finalize();
-  lua_pushnumber(L, ret);
-  return 1;
-}
-static int _MPI_Comm_size(lua_State *L)
-{
-  MPI_Comm comm = *((MPI_Comm*) luaL_checkudata(L, 1, "MPI::Comm"));
-  int *size = (int*) lua_touserdata(L, 2); luaL_checktype(L, 2, LUA_TUSERDATA);
-  int ret = MPI_Comm_size(comm, size);
-  lua_pushnumber(L, ret);
-  return 1;
-}
-static int _MPI_Comm_rank(lua_State *L)
-{
-  MPI_Comm comm = *((MPI_Comm*) luaL_checkudata(L, 1, "MPI::Comm"));
-  int *rank = (int*) lua_touserdata(L, 2); luaL_checktype(L, 2, LUA_TUSERDATA);
-  int ret = MPI_Comm_rank(comm, rank);
-  lua_pushnumber(L, ret);
-  return 1;
-}
+#include "mpifuncs.c"
+
 
 static void register_constants(lua_State *L)
 {
@@ -233,11 +213,6 @@ int luaopen_mpi(lua_State *L)
     {"Win", _MPI_Win},
     {"Win_copy_attr_function", _MPI_Win_copy_attr_function},
     {"Win_delete_attr_function", _MPI_Win_delete_attr_function},
-
-    {"Comm_rank", _MPI_Comm_rank},
-    {"Comm_size", _MPI_Comm_size},
-    {"Init", _MPI_Init},
-    {"Finalize", _MPI_Finalize},
     {NULL, NULL}};
 
   luaL_newmetatable(L, "MPI::Aint"); lua_pop(L, 1);
@@ -270,6 +245,7 @@ int luaopen_mpi(lua_State *L)
 
   lua_newtable(L);
   luaL_setfuncs(L, mpi_types, 0);
+  luaL_setfuncs(L, MPI_module_funcs, 0);
   register_constants(L);
   return 1;
 }
