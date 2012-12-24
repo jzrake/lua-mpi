@@ -30,7 +30,7 @@ CFLAGS ?= -Wall
 CURL ?= curl
 UNTAR ?= tar -xvf
 CD ?= cd
-RM ?= rm
+RM ?= rm -f
 OS ?= generic
 LVER ?= lua-5.2.1
 
