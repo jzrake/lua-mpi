@@ -113,6 +113,7 @@ static void register_constants(lua_State *L)
   luampi_push_MPI_Datatype(L, MPI_DATATYPE_NULL, 1); lua_setfield(L, -2, "DATATYPE_NULL");
   luampi_push_MPI_Request(L, MPI_REQUEST_NULL, 1); lua_setfield(L, -2, "REQUEST_NULL");
   luampi_push_MPI_Errhandler(L, MPI_ERRHANDLER_NULL, 1); lua_setfield(L, -2, "ERRHANDLER_NULL");
+  luampi_push_MPI_Info(L, MPI_INFO_NULL, 1); lua_setfield(L, -2, "INFO_NULL");
 
 
   // Predefined constants
