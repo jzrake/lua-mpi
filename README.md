@@ -55,7 +55,7 @@ you are using it.
 
 The Lua MPI wrappers are licensed under the same terms as Lua itself.
 
-Copyright (c) 2012, Jonathan Zrake & Dorian Krause
+Copyright (c) 2012, Jonathan Zrake <jonathan.zrake@gmail.com> & Dorian Krause
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
