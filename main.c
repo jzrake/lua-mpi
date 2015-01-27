@@ -6,7 +6,7 @@
 
 
 int luaopen_buffer(lua_State *L);
-int luaopen_mpi(lua_State *L);
+int luaopen_MPI(lua_State *L);
 
 
 int main(int argc, char **argv)
@@ -14,7 +14,7 @@ int main(int argc, char **argv)
   int n;
   lua_State *L = luaL_newstate();
   luaL_openlibs(L);
-  luaL_requiref(L, "MPI", luaopen_mpi, 0); lua_pop(L, 1);
+  luaL_requiref(L, "MPI", luaopen_MPI, 0); lua_pop(L, 1);
   luaL_requiref(L, "buffer", luaopen_buffer, 0); lua_pop(L, 1);
 
 

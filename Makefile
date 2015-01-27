@@ -38,7 +38,7 @@ LUA_I ?= -I$(LUA_HOME)/include
 LUA_L ?= -L$(LUA_HOME)/lib -llua
 
 
-default : main
+default : main MPI.so buffer.so
 
 lua : $(LVER)
 
@@ -66,6 +66,12 @@ main : main.o lua-mpi.o buffer.o
 
 clean :
 	$(RM) *.o mpifuncs.c main
+
+MPI.so: lua-mpi.o
+	$(CC) $(CFLAGS) -shared -fPIC -o $@ $< $(LUA_I) $(LUA_L)
+
+buffer.so: buffer.o
+	$(CC) $(CFLAGS) -shared -fPIC -o $@ $< $(LUA_I) $(LUA_L)
 
 # Also remove local Lua sources
 realclean : clean

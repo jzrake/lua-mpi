@@ -53,8 +53,10 @@ mpi_datatypes = [
     'MPI_2INT',
     'MPI_LONG_DOUBLE_INT',
     'MPI_PACKED',
-    'MPI_UB',
-    'MPI_LB' ]
+    # DEPRECRATED IN MPI 2.0   
+    #'MPI_UB',
+    #'MPI_LB'
+    ]
 
 mpi_misc = [
     'MPI_ANY_SOURCE',
