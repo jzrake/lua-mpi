@@ -26,7 +26,7 @@
 MAKEFILE_IN = Makefile.in
 include $(MAKEFILE_IN)
 
-CFLAGS ?= -Wall
+CFLAGS ?= -Wall -shared -fPIC
 CURL ?= curl
 UNTAR ?= tar -xvf
 CD ?= cd
@@ -68,10 +68,10 @@ clean :
 	$(RM) *.o mpifuncs.c main
 
 MPI.so: lua-mpi.o
-	$(CC) $(CFLAGS) -shared -fPIC -o $@ $< $(LUA_I) $(LUA_L)
+	$(CC) $(CFLAGS) -o $@ $< $(LUA_I) $(LUA_L)
 
 buffer.so: buffer.o
-	$(CC) $(CFLAGS) -shared -fPIC -o $@ $< $(LUA_I) $(LUA_L)
+	$(CC) $(CFLAGS) -o $@ $< $(LUA_I) $(LUA_L)
 
 # Also remove local Lua sources
 realclean : clean
