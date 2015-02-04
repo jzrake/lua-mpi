@@ -31,7 +31,7 @@ int main(int argc, char **argv)
   // Run the script
   // ---------------------------------------------------------------------------
   if (argc == 1) {
-    printf("usage: main script.lua [arg1=val1 arg2=val2]\n");
+    printf("usage: %s script.lua [arg1=val1 arg2=val2]\n", argv[0]);
   }
   else {
     char luacode[4096];

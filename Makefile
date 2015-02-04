@@ -62,7 +62,7 @@ main.o : main.c
 	$(CC) $(CFLAGS) -c -o $@ $< $(LUA_I)
 
 main : main.o lua-mpi.o buffer.o
-	$(CC) $(CFLAGS) -o $@ $^ $(LUA_I) $(LUA_L)
+	$(CC) -o $@ $^ $(LUA_I) $(LUA_L)
 
 clean :
 	$(RM) *.o mpifuncs.c main
