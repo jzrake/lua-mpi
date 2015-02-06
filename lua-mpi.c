@@ -49,7 +49,7 @@ MPI_STRUCT_TYPE(File, MPI_FILE_NULL)
 MPI_STRUCT_TYPE(Group, MPI_GROUP_NULL)
 MPI_STRUCT_TYPE(Info, MPI_INFO_NULL)
 MPI_STRUCT_TYPE(Offset, MPI_OFFSET_NULL)
-MPI_STRUCT_TYPE(Op, MPI_DATATYPE_NULL)
+MPI_STRUCT_TYPE(Op, MPI_OP_NULL)
 MPI_STRUCT_TYPE(Request, MPI_REQUEST_NULL)
 MPI_STRUCT_TYPE(Status, MPI_STATUS_NULL)
 MPI_STRUCT_TYPE(Win, MPI_WIN_NULL)
@@ -102,8 +102,10 @@ static void register_constants(lua_State *L)
   luampi_push_MPI_Datatype(L, MPI_2INT, 1); lua_setfield(L, -2, "2INT");
   luampi_push_MPI_Datatype(L, MPI_LONG_DOUBLE_INT, 1); lua_setfield(L, -2, "LONG_DOUBLE_INT");
   luampi_push_MPI_Datatype(L, MPI_PACKED, 1); lua_setfield(L, -2, "PACKED");
-  luampi_push_MPI_Datatype(L, MPI_UB, 1); lua_setfield(L, -2, "UB");
-  luampi_push_MPI_Datatype(L, MPI_LB, 1); lua_setfield(L, -2, "LB");
+  /* DEPRECATED IN MPI 2.0
+     luampi_push_MPI_Datatype(L, MPI_UB, 1); lua_setfield(L, -2, "UB");
+     luampi_push_MPI_Datatype(L, MPI_LB, 1); lua_setfield(L, -2, "LB");
+  */
 
 
   // Null objects
@@ -186,7 +188,7 @@ static void register_constants(lua_State *L)
 }
 
 int luaopen_buffer(lua_State *L);
-int luaopen_mpi(lua_State *L)
+int luaopen_MPI(lua_State *L)
 {
   luaL_Reg mpi_types[] = {
     {"Aint", _MPI_Aint},

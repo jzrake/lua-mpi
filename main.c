@@ -6,7 +6,7 @@
 
 
 int luaopen_buffer(lua_State *L);
-int luaopen_mpi(lua_State *L);
+int luaopen_MPI(lua_State *L);
 
 
 int main(int argc, char **argv)
@@ -14,7 +14,7 @@ int main(int argc, char **argv)
   int n;
   lua_State *L = luaL_newstate();
   luaL_openlibs(L);
-  luaL_requiref(L, "MPI", luaopen_mpi, 0); lua_pop(L, 1);
+  luaL_requiref(L, "MPI", luaopen_MPI, 0); lua_pop(L, 1);
   luaL_requiref(L, "buffer", luaopen_buffer, 0); lua_pop(L, 1);
 
 
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
   // Run the script
   // ---------------------------------------------------------------------------
   if (argc == 1) {
-    printf("usage: main script.lua [arg1=val1 arg2=val2]\n");
+    printf("usage: %s script.lua [arg1=val1 arg2=val2]\n", argv[0]);
   }
   else {
     char luacode[4096];
